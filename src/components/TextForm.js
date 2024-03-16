@@ -41,7 +41,7 @@ export default function TextForm(props) {
             value={text}
             onChange={handleOnChange}
             style={{
-              backgroundColor: props.mode === "dark" ? "grey" : "white",
+              backgroundColor: props.mode === "dark" ? "#13466e" : "white",
               color: props.mode === "dark" ? "white" : "#1D80A3",
             }}
           ></textarea>
@@ -65,7 +65,7 @@ export default function TextForm(props) {
       >
         <h2>your text summary</h2>
         <p>
-          {text.length == 0 ? "0" : text.split(" ").length} words and{" "}
+          {text.length === 0 ? "0" : text.split(" ").length} words and{" "}
           {text.length} characters
         </p>
         <p>{0.008 * text.split(" ").length} minutes read</p>
